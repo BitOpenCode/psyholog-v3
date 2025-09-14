@@ -1,25 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Психолог по подписке</title>
     <script type="text/javascript">
-      // Простая переадресация для GitHub Pages SPA
-      var segmentCount = 1; // Количество сегментов в пути для проекта GitHub Pages
-      var l = window.location;
-      
-      // Получаем текущий путь и убираем базовый путь проекта
-      var pathname = l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/';
-      
-      // Переадресация на главную страницу с hash
-      window.location.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        pathname + '#' + l.pathname.slice(pathname.length - 1) + 
-        (l.search ? l.search : '') + l.hash
-      );
+      // Простая переадресация на главную страницу для SPA с HashRouter
+      window.location.replace(window.location.origin + window.location.pathname + '#/');
     </script>
   </head>
   <body>
-    <p>Перенаправление...</p>
+    <p>Переадресация на главную страницу...</p>
   </body>
 </html>

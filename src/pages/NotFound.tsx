@@ -5,9 +5,7 @@ const NotFound = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
-    console.log("Full location object:", location);
-    console.log("Current basename:", import.meta.env.MODE === 'production' ? '/psyholog-v2' : '');
+    console.log("404 - Пользователь попытался получить доступ к несуществующему маршруту:", location.pathname);
   }, [location.pathname]);
 
   return (
