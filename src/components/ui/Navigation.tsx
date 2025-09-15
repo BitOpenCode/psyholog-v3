@@ -28,7 +28,7 @@ const Navigation = () => {
             <div className="flex items-center">
               <div className="w-32 h-16 rounded-lg flex items-center justify-center">
                 <img 
-                  src="/psycholog-logo-posub.jpg"
+                  src="/psyholog-v2/psycholog-logo-posub.jpg"
                   alt="Логотип психолога" 
                   className="w-32 h-16 object-contain"
                 />

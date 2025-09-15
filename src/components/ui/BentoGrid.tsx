@@ -43,7 +43,7 @@ const BentoGrid = () => {
               {/* Background Image */}
               <div className="absolute inset-0">
                 <img 
-                  src="/psychologist-man.jpg" 
+                  src="/psyholog-v2/psychologist-man.jpg" 
                   alt="Психолог" 
                   className="w-full h-full object-contain"
                 />
@@ -289,7 +289,7 @@ const BentoGrid = () => {
                         {/* Хедер чата */}
                         <div className="chat-header">
                           <div className="psychologist-avatar">
-                            <img src="/psychologist-man.jpg" alt="Иван" />
+                            <img src="/psyholog-v2/psychologist-man.jpg" alt="Иван" />
                             <div className="online-indicator"></div>
                           </div>
                           <div className="psychologist-info">
@@ -302,7 +302,7 @@ const BentoGrid = () => {
                         <div className="chat-logo">
                           <div className="brain-icon">
                             <img 
-                              src="/psycholog-logo-posub.jpg" 
+                              src="/psyholog-v2/psycholog-logo-posub.jpg" 
                               alt="Логотип психолога" 
                               className="w-6 h-6 mx-auto"
                             />
@@ -583,7 +583,7 @@ const BentoGrid = () => {
               <div className="flex items-center mb-4">
                 <div className="w-48 h-20 rounded-lg flex items-center justify-start">
                   <img 
-                    src="/footer-logo.jpg"
+                    src="/psyholog-v2/footer-logo.jpg"
                     alt="Логотип психолога" 
                     className="w-48 h-20 object-contain"
                   />
