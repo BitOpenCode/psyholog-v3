@@ -39,7 +39,7 @@ const BentoGrid = () => {
           
           {/* Left Side - Hero Content with Image */}
           <div className="space-y-6">
-            <div className="p-12 rounded-2xl relative overflow-hidden h-[420px] flex flex-col justify-between" style={{backgroundColor: '#FCF9FF'}}>
+            <div className="p-6 sm:p-12 rounded-2xl relative overflow-hidden h-[320px] sm:h-[420px] flex flex-col justify-between" style={{backgroundColor: '#FCF9FF'}}>
               {/* Background Image */}
               <div className="absolute inset-0">
                 <img 
@@ -61,7 +61,7 @@ const BentoGrid = () => {
           <div className="space-y-6">
             {/* Psychologist Name Card - only over service cards */}
             <BentoCard className="p-6 text-center">
-              <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-2">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-2 leading-tight">
                 БОБРОВ ИВАН СЕРГЕЕВИЧ
               </h1>
               <p className="text-lg text-muted-foreground">
@@ -70,7 +70,7 @@ const BentoGrid = () => {
             </BentoCard>
 
             {/* Service Cards Grid */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <BentoCard className="p-6 h-32 flex flex-col justify-between">
                 <h3 className="text-sm font-bold text-foreground leading-tight">
                   АНОНИМНАЯ ПОДДЕРЖКА В ЗАКРЫТОМ TELEGRAM-КАНАЛЕ
@@ -205,20 +205,20 @@ const BentoGrid = () => {
           </div>
 
           {/* Trial Section */}
-            <div className="bg-gradient-soft rounded-3xl px-8 pt-8 pb-4 lg:px-12 lg:pt-12 lg:pb-6 -mt-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="bg-gradient-soft rounded-3xl px-4 pt-6 pb-4 sm:px-8 sm:pt-8 lg:px-12 lg:pt-12 lg:pb-6 -mt-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
               
               {/* Left Content */}
               <div className="text-left">
                 <p className="text-sm text-muted-foreground mb-4">Не можешь определиться?</p>
                 
-                <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-                    <span className="bg-gradient-primary bg-clip-text text-transparent whitespace-nowrap">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+                    <span className="bg-gradient-primary bg-clip-text text-transparent">
                     ПОПРОБУЙ 3 БЕСПЛАТНЫХ ДНЯ!
                   </span>
                 </h2>
                 
-                <h3 className="text-xl lg:text-2xl font-bold text-foreground mb-6">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-6 leading-tight">
                   ТЫ СМОЖЕШЬ ОЦЕНИТЬ ПРЕИМУЩЕСТВА ПСИХОЛОГА ПО ПОДПИСКЕ
                 </h3>
                 

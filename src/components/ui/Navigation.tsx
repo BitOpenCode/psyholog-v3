@@ -22,57 +22,58 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           
-          {/* Логотип и навигация */}
-          <div className="flex items-center space-x-16">
-            {/* Логотип */}
-            <div className="flex items-center">
-              <div className="w-32 h-16 rounded-lg flex items-center justify-center">
-                <img 
-                  src="/psyholog-v2/psycholog-logo-posub.jpg"
-                  alt="Логотип психолога" 
-                  className="w-32 h-16 object-contain"
-                />
-              </div>
-            </div>
-
-            {/* Десктопная навигация */}
-            <div className="hidden md:flex items-center space-x-8">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="nav-link text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200"
-                >
-                  {item.label}
-                </a>
-              ))}
+          {/* Логотип */}
+          <div className="flex items-center">
+            <div className="w-24 h-12 sm:w-32 sm:h-16 rounded-lg flex items-center justify-center">
+              <img 
+                src="/psyholog-v2/psycholog-logo-posub.jpg"
+                alt="Логотип психолога" 
+                className="w-24 h-12 sm:w-32 sm:h-16 object-contain"
+              />
             </div>
           </div>
 
-          {/* Кнопка справа */}
-          <div>
-            <Button className="bg-gradient-primary hover:opacity-90 text-white px-6 py-2">
-              ПЕРЕЙТИ В СООБЩЕСТВО
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Button>
+          {/* Десктопная навигация */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="nav-link text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200"
+              >
+                {item.label}
+              </a>
+            ))}
           </div>
 
-          {/* Мобильная кнопка меню */}
-          <div className="md:hidden">
-            <button
-              onClick={toggleMobileMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary transition-colors duration-200"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Открыть главное меню</span>
-              {isMobileMenuOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
-              )}
-            </button>
+          {/* Кнопка и мобильное меню */}
+          <div className="flex items-center space-x-2">
+            {/* Кнопка - адаптивная */}
+            <div className="hidden sm:block">
+              <Button className="bg-gradient-primary hover:opacity-90 text-white px-4 lg:px-6 py-2 text-xs lg:text-sm">
+                <span className="hidden lg:inline">ПЕРЕЙТИ В СООБЩЕСТВО</span>
+                <span className="lg:hidden">СООБЩЕСТВО</span>
+                <svg className="w-3 h-3 lg:w-4 lg:h-4 ml-1 lg:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Button>
+            </div>
+
+            {/* Мобильная кнопка меню */}
+            <div className="lg:hidden">
+              <button
+                onClick={toggleMobileMenu}
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary transition-colors duration-200"
+                aria-expanded="false"
+              >
+                <span className="sr-only">Открыть главное меню</span>
+                {isMobileMenuOpen ? (
+                  <X className="block h-6 w-6" aria-hidden="true" />
+                ) : (
+                  <Menu className="block h-6 w-6" aria-hidden="true" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
 
