@@ -168,9 +168,9 @@ const Pricing = () => {
               <div className="text-center mb-8">
                 <p className="text-sm text-muted-foreground mb-4">1 МЕСЯЦ</p>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold">2 999 ₽</span>
+                  <span className="text-4xl font-bold whitespace-nowrap">2 999 ₽</span>
                 </div>
-                <p className="text-sm text-muted-foreground">цена за месяц 2 999 ₽</p>
+                <p className="text-sm text-muted-foreground whitespace-nowrap">цена за месяц 2 999 ₽</p>
               </div>
               
               <div className="space-y-4 mb-8">
@@ -242,9 +242,9 @@ const Pricing = () => {
               <div className="text-center mb-8">
                 <p className="text-sm text-muted-foreground mb-4">6 МЕСЯЦЕВ</p>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold">12 999 ₽</span>
+                  <span className="text-4xl font-bold whitespace-nowrap">12 999 ₽</span>
                 </div>
-                <p className="text-sm text-muted-foreground">цена за месяц 2 166 ₽</p>
+                <p className="text-sm text-muted-foreground whitespace-nowrap">цена за месяц 2 166 ₽</p>
               </div>
               
               <div className="space-y-4 mb-8">
@@ -316,9 +316,9 @@ const Pricing = () => {
               <div className="text-center mb-8">
                 <p className="text-sm text-muted-foreground mb-4">12 МЕСЯЦЕВ</p>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold">19 999 ₽</span>
+                  <span className="text-4xl font-bold whitespace-nowrap">19 999 ₽</span>
                 </div>
-                <p className="text-sm text-muted-foreground">цена за месяц 1 666 ₽</p>
+                <p className="text-sm text-muted-foreground whitespace-nowrap">цена за месяц 1 666 ₽</p>
               </div>
               
               <div className="space-y-4 mb-8">

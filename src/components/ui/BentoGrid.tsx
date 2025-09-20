@@ -3,6 +3,8 @@ import { Button } from "./button";
 import { Card } from "./card";
 import { cn } from "../../lib/utils";
 import Navigation from "./Navigation";
+import logoImage from "/logo.jpg";
+import userAvatar from "/user.jpg";
 
 interface BentoCardProps {
   className?: string;
@@ -232,7 +234,7 @@ const BentoGrid = () => {
                     <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-2">
                       ВЫГОДНО
                     </div>
-                    <div className="text-4xl lg:text-5xl font-bold text-primary mb-1">
+                    <div className="text-4xl lg:text-5xl font-bold text-primary mb-1 whitespace-nowrap">
                       2 999 ₽
                     </div>
                     <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">
@@ -244,7 +246,7 @@ const BentoGrid = () => {
                     <div className="text-sm text-muted-foreground mb-2">
                       ЦЕНА МЕСЯЦА У ПСИХОЛОГА
                     </div>
-                    <div className="text-4xl lg:text-5xl font-bold text-foreground mb-1">
+                    <div className="text-4xl lg:text-5xl font-bold text-foreground mb-1 whitespace-nowrap">
                       30 000 ₽
                     </div>
                     <div className="text-sm text-muted-foreground">
@@ -316,30 +318,35 @@ const BentoGrid = () => {
                         {/* Сообщения чата */}
                         <div className="chat-messages">
                           <div className="message user-message">
-                            <div className="user-avatar">
-                              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Пользователь" />
-                            </div>
                             <div className="message-bubble user-bubble">
-                              <p>Доброй ночи, я прямо вот попал в тяжелую финансовую проблему и никто не может мне помочь (</p>
+                              <p>Я выбрала себе супер холодного мужчину. Уйти не могу, зависимость.  И сама умираю в этих отношениях так как, даже если я плачу муж делает вид, что ничего не происходит</p>
+                            </div>
+                            <div className="user-avatar">
+                              <img src={userAvatar} alt="Пользователь" />
                             </div>
                           </div>
                           
-                          <div className="message psychologist-message">
+                            <div className="message psychologist-message">
+                            <div className="psychologist-avatar-small">
+                              <img src="/psyholog-v3/psychologist-man.jpg" alt="Иван" />
+                            </div>
                             <div className="message-bubble psychologist-bubble">
                               <p>Доброй ночи! Сейчас разберем вашу проблему...</p>
-                            </div>
-                            <div className="psychologist-avatar-small">
-                              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Иван" />
                             </div>
                           </div>
                           
                           <div className="message user-message">
-                            <div className="user-avatar">
-                              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Пользователь" />
-                            </div>
                             <div className="message-bubble user-bubble">
                               <p>Отлично, слушаю</p>
                             </div>
+                            <div className="user-avatar">
+                              <img src={userAvatar} alt="Пользователь" />
+                            </div>
+                          </div>
+                          
+                          {/* Логотип в центре экрана */}
+                          <div className="flex justify-center items-center py-6 mt-2">
+                            <img src={logoImage} alt="" className="w-64 h-auto" style={{maxWidth: '250px'}} />
                           </div>
                         </div>
                         

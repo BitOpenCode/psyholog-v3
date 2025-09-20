@@ -154,7 +154,7 @@ All colors MUST be HSL.
   background: #ffffff;
   user-select: none;
   transform: scale(0.5);
-  box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Слои корпуса iPhone */
@@ -269,7 +269,7 @@ All colors MUST be HSL.
   left: 1.9rem;
   right: 1.9rem;
   bottom: 1.9rem;
-  background: #FFFFFF;
+  background: #f8f9fa;
   border-radius: 4.5rem;
   overflow: hidden;
   display: flex;
