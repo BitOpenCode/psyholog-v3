@@ -71,44 +71,44 @@ const BentoGrid = () => {
 
             {/* Service Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <BentoCard className="p-6 h-32 flex flex-col justify-between">
-                <h3 className="text-sm font-bold text-foreground leading-tight">
+              <BentoCard className="p-4 sm:p-6 h-32 flex flex-col justify-center sm:justify-between">
+                <h3 className="text-sm font-bold text-foreground leading-tight text-center sm:text-left">
                   АНОНИМНАЯ ПОДДЕРЖКА В ЗАКРЫТОМ TELEGRAM-КАНАЛЕ
                 </h3>
-                <div className="flex justify-end">
+                <div className="flex justify-end hidden sm:flex">
                   <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
                     <span className="text-gray-600 text-sm">+</span>
                   </div>
                 </div>
               </BentoCard>
 
-              <BentoCard className="p-6 h-32 flex flex-col justify-between">
-                <h3 className="text-sm font-bold text-foreground leading-tight">
+              <BentoCard className="p-4 sm:p-6 h-32 flex flex-col justify-center sm:justify-between">
+                <h3 className="text-sm font-bold text-foreground leading-tight text-center sm:text-left">
                   ПЕРСОНАЛЬНЫЙ РАЗБОР СИТУАЦИИ
                 </h3>
-                <div className="flex justify-end">
+                <div className="flex justify-end hidden sm:flex">
                   <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
                     <span className="text-gray-600 text-sm">+</span>
                   </div>
                 </div>
               </BentoCard>
 
-              <BentoCard className="p-6 h-32 flex flex-col justify-between">
-                <h3 className="text-sm font-bold text-foreground leading-tight">
+              <BentoCard className="p-4 sm:p-6 h-32 flex flex-col justify-center sm:justify-between">
+                <h3 className="text-sm font-bold text-foreground leading-tight text-center sm:text-left">
                   КАЖДЫЙ ДЕНЬ РАЗБОРЫ СИТУАЦИЙ УЧАСТНИКОВ
                 </h3>
-                <div className="flex justify-end">
+                <div className="flex justify-end hidden sm:flex">
                   <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
                     <span className="text-gray-600 text-sm">+</span>
                   </div>
             </div>
           </BentoCard>
 
-              <BentoCard className="p-6 h-32 flex flex-col justify-between bg-gradient-primary text-primary-foreground">
-                <h3 className="text-sm font-bold leading-tight">
+              <BentoCard className="p-4 sm:p-6 h-32 flex flex-col justify-center sm:justify-between bg-gradient-primary text-primary-foreground">
+                <h3 className="text-sm font-bold leading-tight text-center sm:text-left">
                   ПОПРОБОВАТЬ 3 БЕСПЛАТНЫХ ДНЯ
                 </h3>
-                <div className="flex justify-end">
+                <div className="flex justify-end hidden sm:flex">
                   <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
                     <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
