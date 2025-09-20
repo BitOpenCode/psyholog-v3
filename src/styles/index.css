@@ -294,10 +294,47 @@ All colors MUST be HSL.
   font-size: 12px;
 }
 
+/* Время */
+.time {
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 16px;
+}
+
+/* Иконки статуса */
+.status-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 4px;
+}
+
+
+/* Иконка сигнала */
+.status-icons .signal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Иконка WiFi */
+.status-icons .wifi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Иконка батареи */
+.status-icons .battery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Хедер чата */
 .chat-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 20px;
   background: #f8f9fa;
   border-bottom: 1px solid #e9ecef;
@@ -307,6 +344,13 @@ All colors MUST be HSL.
 .psychologist-avatar {
   position: relative;
   margin-right: 12px;
+}
+
+.psychologist-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .psychologist-avatar img {
@@ -329,7 +373,7 @@ All colors MUST be HSL.
 
 .psychologist-info h3 {
   margin: 0;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   color: #333;
 }
