@@ -58,7 +58,7 @@ const BentoGrid = () => {
           </div>
 
           {/* Right Side - Psychologist Name + Service Cards */}
-          <div className="space-y-6">
+          <div className="space-y-6" id="about">
             {/* Psychologist Name Card - only over service cards */}
             <BentoCard className="p-6 text-center">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-2 leading-tight">
@@ -205,7 +205,7 @@ const BentoGrid = () => {
           </div>
 
           {/* Trial Section */}
-            <div className="bg-gradient-soft rounded-3xl px-4 pt-6 pb-4 sm:px-8 sm:pt-8 lg:px-12 lg:pt-12 lg:pb-6 -mt-12">
+            <div className="bg-gradient-soft rounded-3xl px-4 pt-6 pb-4 sm:px-8 sm:pt-8 lg:px-12 lg:pt-12 lg:pb-6 -mt-12" id="services">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
               
               {/* Left Content */}
@@ -352,7 +352,7 @@ const BentoGrid = () => {
       </div>
 
         {/* How It Works Section */}
-        <div className="py-12 bg-gradient-soft rounded-3xl mx-4 lg:mx-8 mt-8">
+        <div className="py-12 bg-gradient-soft rounded-3xl mx-4 lg:mx-8 mt-8" id="how-it-works">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
               КАК ЭТО РАБОТАЕТ
@@ -407,28 +407,14 @@ const BentoGrid = () => {
         </div>
 
         {/* Testimonials Section */}
-        <div className="py-12 bg-gradient-soft rounded-3xl mx-4 lg:mx-8 mt-8">
+        <div className="py-12 bg-gradient-soft rounded-3xl mx-4 lg:mx-8 mt-8" id="reviews">
           <div className="container mx-auto px-4">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 leading-tight">
               ИСТОРИИ УЧАСТНИКОВ
             </h2>
             
-            <div className="relative">
-              {/* Navigation Arrows - скрыты на мобильных */}
-              <button className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow hidden lg:block">
-                <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              
-              <button className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow hidden lg:block">
-                <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-
-              {/* Testimonial Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-2 sm:px-6 lg:px-12">
+            {/* Testimonial Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-2 sm:px-6 lg:px-12">
                 {/* Card 1 - Анна */}
                 <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm border">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-1 sm:space-y-0">
@@ -484,21 +470,12 @@ const BentoGrid = () => {
                 </div>
               </div>
 
-              {/* Pagination Dots */}
-              <div className="flex justify-center mt-8 space-x-2">
-                <div className="w-3 h-3 bg-gray-300 rounded"></div>
-                <div className="w-3 h-3 bg-primary rounded"></div>
-                <div className="w-3 h-3 bg-gray-300 rounded"></div>
-              </div>
             </div>
           </div>
         </div>
 
-      </div>
-
-
       {/* New Section - Contact Specialist */}
-      <div className="max-w-7xl mx-auto mt-8">
+      <div className="max-w-7xl mx-auto mt-8" id="pricing">
         <div className="bg-gradient-soft rounded-3xl p-8 lg:p-12">
           <div className="text-center mb-12">
             <p className="text-sm text-muted-foreground mb-4">Не можешь определиться?</p>
@@ -594,11 +571,26 @@ const BentoGrid = () => {
             {/* Navigation Links */}
             <div className="lg:col-span-2 flex items-center">
               <nav className="grid grid-cols-2 md:grid-cols-5 gap-4 w-full">
-                <a href="#" className="text-sm hover:text-primary transition-colors">ОБО МНЕ</a>
-                <a href="#" className="text-sm hover:text-primary transition-colors">КАК ЭТО РАБОТАЕТ</a>
-                <a href="#" className="text-sm hover:text-primary transition-colors">ОТЗЫВЫ</a>
-                <a href="#" className="text-sm hover:text-primary transition-colors">УСЛУГИ</a>
-                <a href="#" className="text-sm hover:text-primary transition-colors">СТОИМОСТЬ</a>
+                <button onClick={() => {
+                  const element = document.getElementById('about');
+                  if (element) element.scrollIntoView({ behavior: 'smooth' });
+                }} className="text-sm hover:text-primary transition-colors text-left">ОБО МНЕ</button>
+                <button onClick={() => {
+                  const element = document.getElementById('how-it-works');
+                  if (element) element.scrollIntoView({ behavior: 'smooth' });
+                }} className="text-sm hover:text-primary transition-colors text-left">КАК ЭТО РАБОТАЕТ</button>
+                <button onClick={() => {
+                  const element = document.getElementById('reviews');
+                  if (element) element.scrollIntoView({ behavior: 'smooth' });
+                }} className="text-sm hover:text-primary transition-colors text-left">ОТЗЫВЫ</button>
+                <button onClick={() => {
+                  const element = document.getElementById('services');
+                  if (element) element.scrollIntoView({ behavior: 'smooth' });
+                }} className="text-sm hover:text-primary transition-colors text-left">УСЛУГИ</button>
+                <button onClick={() => {
+                  const element = document.getElementById('pricing');
+                  if (element) element.scrollIntoView({ behavior: 'smooth' });
+                }} className="text-sm hover:text-primary transition-colors text-left">СТОИМОСТЬ</button>
               </nav>
             </div>
 

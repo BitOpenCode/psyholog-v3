@@ -9,12 +9,19 @@ const Navigation = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const navItems = [
-    { label: 'ОБО МНЕ', href: '#about' },
-    { label: 'КАК ЭТО РАБОТАЕТ', href: '#how-it-works' },
-    { label: 'ОТЗЫВЫ', href: '#reviews' },
-    { label: 'УСЛУГИ', href: '#services' },
-    { label: 'СТОИМОСТЬ', href: '#pricing' },
+    { label: 'ОБО МНЕ', action: () => scrollToSection('about') },
+    { label: 'КАК ЭТО РАБОТАЕТ', action: () => scrollToSection('how-it-works') },
+    { label: 'ОТЗЫВЫ', action: () => scrollToSection('reviews') },
+    { label: 'УСЛУГИ', action: () => scrollToSection('services') },
+    { label: 'СТОИМОСТЬ', action: () => scrollToSection('pricing') },
   ];
 
   return (
@@ -34,17 +41,17 @@ const Navigation = () => {
           </div>
 
           {/* Десктопная навигация */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="nav-link text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200"
-              >
-                {item.label}
-              </a>
-            ))}
-          </div>
+            <div className="hidden lg:flex items-center space-x-8">
+              {navItems.map((item) => (
+                <button
+                  key={item.label}
+                  onClick={item.action}
+                  className="nav-link text-sm font-medium text-gray-700 hover:text-primary transition-colors duration-200"
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
 
           {/* Кнопка и мобильное меню */}
           <div className="flex items-center space-x-2">
@@ -82,14 +89,16 @@ const Navigation = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-100">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.label}
-                  href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors duration-200"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    item.action();
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="block w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors duration-200"
                 >
                   {item.label}
-                </a>
+                </button>
               ))}
               <div className="pt-4">
                 <Button className="w-full bg-gradient-primary hover:opacity-90 text-white px-6 py-3">
