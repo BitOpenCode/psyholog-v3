@@ -409,29 +409,29 @@ const BentoGrid = () => {
         {/* Testimonials Section */}
         <div className="py-12 bg-gradient-soft rounded-3xl mx-4 lg:mx-8 mt-8">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 leading-tight">
               ИСТОРИИ УЧАСТНИКОВ
             </h2>
             
             <div className="relative">
-              {/* Navigation Arrows */}
-              <button className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow">
+              {/* Navigation Arrows - скрыты на мобильных */}
+              <button className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow hidden lg:block">
                 <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
               
-              <button className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow">
+              <button className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-shadow hidden lg:block">
                 <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
 
               {/* Testimonial Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-2 sm:px-6 lg:px-12">
                 {/* Card 1 - Анна */}
-                <div className="bg-white rounded-lg p-6 shadow-sm border">
-                  <div className="flex items-center justify-between mb-4">
+                <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm border">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-1 sm:space-y-0">
                     <h3 className="text-lg font-bold text-foreground">Анна</h3>
                     <span className="text-sm text-muted-foreground">Участник программы 1 месяц</span>
                   </div>
@@ -448,8 +448,8 @@ const BentoGrid = () => {
             </div>
             
                 {/* Card 2 - Михаил */}
-                <div className="bg-white rounded-lg p-6 shadow-sm border">
-                  <div className="flex items-center justify-between mb-4">
+                <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm border">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-1 sm:space-y-0">
                     <h3 className="text-lg font-bold text-foreground">Михаил</h3>
                     <span className="text-sm text-muted-foreground">Участник программы 3 месяца</span>
                   </div>
@@ -466,8 +466,8 @@ const BentoGrid = () => {
             </div>
             
                 {/* Card 3 - Константин */}
-                <div className="bg-white rounded-lg p-6 shadow-sm border">
-                  <div className="flex items-center justify-between mb-4">
+                <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm border">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-1 sm:space-y-0">
                     <h3 className="text-lg font-bold text-foreground">Константин</h3>
                     <span className="text-sm text-muted-foreground">Участник программы 2 месяца</span>
                   </div>
