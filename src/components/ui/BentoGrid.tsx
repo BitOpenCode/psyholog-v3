@@ -43,7 +43,7 @@ const BentoGrid = () => {
               {/* Background Image */}
               <div className="absolute inset-0">
                 <img 
-                  src="/psyholog-v2/psychologist-man.jpg" 
+                  src="/psyholog-v3/psychologist-man.jpg" 
                   alt="Психолог" 
                   className="w-full h-full object-contain"
                 />
@@ -289,7 +289,7 @@ const BentoGrid = () => {
                         {/* Хедер чата */}
                         <div className="chat-header">
                           <div className="psychologist-avatar">
-                            <img src="/psyholog-v2/psychologist-man.jpg" alt="Иван" />
+                            <img src="/psyholog-v3/psychologist-man.jpg" alt="Иван" />
                             <div className="online-indicator"></div>
                           </div>
                           <div className="psychologist-info">
@@ -302,7 +302,7 @@ const BentoGrid = () => {
                         <div className="chat-logo">
                           <div className="brain-icon">
                             <img 
-                              src="/psyholog-v2/psycholog-logo-posub.jpg" 
+                              src="/psyholog-v3/psycholog-logo-posub.jpg" 
                               alt="Логотип психолога" 
                               className="w-6 h-6 mx-auto"
                             />
@@ -560,9 +560,12 @@ const BentoGrid = () => {
               <div className="flex items-center mb-4">
                 <div className="w-48 h-20 rounded-lg flex items-center justify-start">
                   <img 
-                    src="/psyholog-v2/footer-logo.jpg"
+                    src="/psyholog-v3/footer-logo.jpg"
                     alt="Логотип психолога" 
-                    className="w-48 h-20 object-contain"
+                    className="w-48 h-20 object-contain select-none pointer-events-none"
+                    draggable="false"
+                    onContextMenu={(e) => e.preventDefault()}
+                    style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
                   />
                 </div>
               </div>
@@ -588,8 +591,7 @@ const BentoGrid = () => {
                   if (element) element.scrollIntoView({ behavior: 'smooth' });
                 }} className="text-sm hover:text-primary transition-colors text-left">УСЛУГИ</button>
                 <button onClick={() => {
-                  const element = document.getElementById('pricing');
-                  if (element) element.scrollIntoView({ behavior: 'smooth' });
+                  window.location.href = '#/pricing';
                 }} className="text-sm hover:text-primary transition-colors text-left">СТОИМОСТЬ</button>
               </nav>
             </div>

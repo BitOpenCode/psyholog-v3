@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Button } from './button';
 import { Menu, X } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -21,7 +23,7 @@ const Navigation = () => {
     { label: 'КАК ЭТО РАБОТАЕТ', action: () => scrollToSection('how-it-works') },
     { label: 'ОТЗЫВЫ', action: () => scrollToSection('reviews') },
     { label: 'УСЛУГИ', action: () => scrollToSection('services') },
-    { label: 'СТОИМОСТЬ', action: () => scrollToSection('pricing') },
+    { label: 'СТОИМОСТЬ', action: () => navigate('/pricing') },
   ];
 
   return (
@@ -33,9 +35,12 @@ const Navigation = () => {
           <div className="flex items-center">
             <div className="w-24 h-12 sm:w-32 sm:h-16 rounded-lg flex items-center justify-center">
               <img 
-                src="/psyholog-v2/psycholog-logo-posub.jpg"
+                src="/psyholog-v3/psycholog-logo-posub.jpg"
                 alt="Логотип психолога" 
-                className="w-24 h-12 sm:w-32 sm:h-16 object-contain"
+                className="w-24 h-12 sm:w-32 sm:h-16 object-contain select-none"
+                draggable="false"
+                onContextMenu={(e) => e.preventDefault()}
+                style={{ userSelect: 'none', WebkitUserSelect: 'none' }}
               />
             </div>
           </div>
