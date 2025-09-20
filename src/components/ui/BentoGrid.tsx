@@ -312,17 +312,6 @@ const BentoGrid = () => {
                           </div>
                         </div>
                         
-                        {/* Логотип */}
-                        <div className="chat-logo">
-                          <div className="brain-icon">
-                            <img 
-                              src="/psyholog-v3/psycholog-logo-posub.jpg" 
-                              alt="Логотип психолога" 
-                              className="w-6 h-6 mx-auto"
-                            />
-                      </div>
-                          <h2 className="chat-title">Психолог по подписке</h2>
-                        </div>
                         
                         {/* Сообщения чата */}
                         <div className="chat-messages">
